@@ -74,9 +74,10 @@ public class Login extends javax.swing.JFrame {
                             .addComponent(txtLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(jPanel1Layout.createSequentialGroup()
                             .addContainerGap()
-                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(jButton1)))))
+                            .addComponent(txtSenha, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(127, 127, 127)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(103, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -112,11 +113,17 @@ public class Login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      if(txtLogin.getText().equals("USUARIO")&&txtSenha.getText().equals("123")){
-          JOptionPane.showMessageDialog(null, "BEM VINDO!");
+      
+        if(txtLogin.getText().equals("root")&&txtSenha.getText().equals("123")){
+          
+          Cadastro telaCadastro = new Cadastro();
+          telaCadastro.setVisible(true);
+          
       }else{
           JOptionPane.showMessageDialog(null, "ACESSO NEGADO!");
       }
+        
+          
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

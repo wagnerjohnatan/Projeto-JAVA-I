@@ -12,7 +12,7 @@ public class Conexao {
     public static connection getConexao(){
         try{
             
-        connection connection = (connection) DriverManager.getConnection("jdbc:mysql:localhost:3306", "root", "");
+        connection connection = (connection) DriverManager.getConnection("jdbc:hsqldb:file:C:\\Users\\WAGNER JOHNATAN\\Desktop\\BANCO DE DADOS\\pitang", "SA", "1234");
         System.out.println("conectador com sucesso!");
         return connection;
         
